@@ -100,17 +100,3 @@ curl -v -X DELETE http://127.0.0.1:8000/api/touits/999999   -H "Authorization: B
 **Attendu** : 404 Not Found
 
 ---
-
-## 4) (Optionnel) Profil
-
-### 4.1 Profil – OK
-```bash
-curl -v http://127.0.0.1:8000/api/profile   -H "Authorization: Bearer COLLER_ICI_LE_TOKEN"
-```
-**Attendu** : 200 OK + `{"id":...,"email":"user@example.com","roles":[...]}`
-
-### 4.2 Profil – sans token
-```bash
-curl -v http://127.0.0.1:8000/api/profile
-```
-**Attendu** : 401 Unauthorized
